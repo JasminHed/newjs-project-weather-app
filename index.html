@@ -21,16 +21,27 @@
 <body>
 
   <div class="container">
+    <h1 class="sr-only">Weather App</h1>
 
     <div class="overlay"></div>
     <div class="input-container">
+      <label
+        for="input-field"
+        class="sr-only"
+      >Search city</label>
       <input
         type="text"
         id="input-field"
         placeholder="Search city"
       >
-      <button id="search-button">
-        <i class="fa-solid fa-magnifying-glass"></i>
+      <button
+        id="search-button"
+        aria-label="Search"
+      >
+        <i
+          class="fa-solid fa-magnifying-glass"
+          aria-hidden="true"
+        ></i>
       </button>
     </div>
 
@@ -40,30 +51,27 @@
         id="weather-content"
       >
       </div>
-      <!--removed since JS shows this dynamically-->
-      <!--<p id="temperature"></p>
-        <p id="city"></p>
-        <p id="time"></p>
-        <p id="weather"></p>
 
-        <div class="sunrise-sunset">
-          <p id="sunrise"> </p>
-          <p id="sunset"> </p>
-        </div>
-      </div>
-    </div>-->
 
-      <button id="next-side-button"><i class="fa-solid fa-angle-right"></i></button>
+      <button
+        id="next-side-button"
+        aria-label="Show next City"
+      ><i
+          class="fa-solid fa-angle-right"
+          aria-hidden="true"
+        ></i></button>
 
       <div
         class="weather-forecast"
         id="weather-forecast"
       >
+        <h2 class="sr-only">Weather Forecast</h2>
 
         <table>
+          <caption class="sr-only">4-day weather forecast</caption>
           <tr>
             <td id="day1"></td>
-            <td id="iconday1"></td> <!--removed icon since we use from API-->
+            <td id="iconday1"></td>
             <td id="tempday1"></td>
             <td id="windday1"></td>
           </tr>
